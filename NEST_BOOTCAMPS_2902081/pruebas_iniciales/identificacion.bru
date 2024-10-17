@@ -1,0 +1,17 @@
+meta {
+  name: identificacion
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/identificacion/678?nombre=cata&edad=28&ciudad=Canada
+  body: none
+  auth: none
+}
+
+params:query {
+  nombre: cata
+  edad: 28
+  ciudad: Canada
+}
