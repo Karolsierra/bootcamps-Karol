@@ -6,13 +6,30 @@ export class Bootcamp {
 @PrimaryGeneratedColumn()
 id:number
 
-@Column()
+@Column({type: "integer",
+    nullable: true
+})
+
 phone:number
 
-@Column ()
+@Column ({
+    type: "varchar",
+    nullable: false
+})
 name: string
 
 @Column({name : 'average_number'})
 averageRating: number
 
+@Column ({type: "varchar", nullable: false})
+address: string 
+
+
+@Column({type: "varchar"})
+topics: string
+
+@Column({type: "timestamp", 
+    default: () => 'CURRENT_TIMESTAMP',
+    name: "created_at" })
+    createdAt: Date
 }

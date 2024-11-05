@@ -9,7 +9,8 @@ export class BootcampsController {
 
   @Post()
   create(@Body() createBootcampDto: CreateBootcampDto) {
-    return this.bootcampsService.create(createBootcampDto);
+    return this.bootcampsService.create(createBootcampDto); 
+    createBootcampDto;
   }
 
   @Get()
@@ -23,7 +24,11 @@ export class BootcampsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBootcampDto: any) {
+  update(@Param('id') id: string, @Body() updateBootcampDto: UpdateBootcampDto) {
+    //return{
+      //id,
+      //updateBootcampDto
+    //}
     return this.bootcampsService.update(+id, updateBootcampDto);
   }
 
